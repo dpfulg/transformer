@@ -95,6 +95,8 @@ Sometimes you want to have a bigger block in the config if a condition is true (
 What happens here:
 First the variable `${backend.tracing.enabled}` gets resolved to a value. if this value is `"true"`, `"on"`, `"enabled"` or `"1"` then everything which is betweend the `<!-- [if ....]-->` and `<!-- [endif] -->` will be in the transform output, otherwise the whole block is skipped.
 
+Use `<!-- [if not ....]-->` if you want the content in the block to be transformed in cases where the condition is not met.
+
 Note: There is no else or any operator for the if statement like equals.
 
 #### In environment files
